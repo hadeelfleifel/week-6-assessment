@@ -159,14 +159,29 @@ function avgLength(arr,key) {
 
 
 
+//another solution
+
+
+var arrOfObj4 = [
+  { name: "alex", food: "fried chiken" },
+  { name: "mercer", food: "pizaa" },
+  { name: "alice", food: "burger" },
+  { name: "zaheer", food: "hot dog" },
+  { name: "elizabeth" }
+]
 
 
 
 
+function avgLength(arrayOfObject,key)
+{
+
+    let fillter = arrayOfObject.filter(newItems=>newItems[key]);
+    let AVG = fillter.reduce((acc,cv)=>acc+cv[key].length,0) / fillter.length
 
 
 
-
-
+    return AVG;
+}
 
 
